@@ -17,43 +17,32 @@ const navItems = [
 const stats = [
   { value: '250+', label: 'นักศึกษา',        icon: '🎓', color: '#4f46e5', bg: '#ede9fe' },
   { value: '7',    label: 'คณาจารย์',        icon: '👨‍🏫', color: '#0891b2', bg: '#cffafe' },
-  { value: '3',    label: 'สาขาวิชา',        icon: '💡', color: '#059669', bg: '#d1fae5' },
+  { value: '2',    label: 'หลักสูตร (ปวช./ปวส.)', icon: '💡', color: '#059669', bg: '#d1fae5' },
   { value: '95%',  label: 'อัตราการมีงานทำ', icon: '🚀', color: '#d97706', bg: '#fef3c7' },
 ]
 
 const curriculumData = [
   {
-    id: 'bcom', badge: 'ปวช.', icon: '💻',
-    title: 'คอมพิวเตอร์ธุรกิจ', subtitle: 'Business Computer', duration: '3 ปี',
+    id: 'bcom-voc', badge: 'ปวช.', icon: '💻',
+    title: 'คอมพิวเตอร์ธุรกิจ (ปวช.)', subtitle: 'Business Computer (Vocational Certificate)', duration: '3 ปี',
     color: '#4f46e5', bg: '#ede9fe',
-    desc: 'เรียนรู้พื้นฐานด้านคอมพิวเตอร์ โปรแกรมสำนักงาน การพัฒนาเว็บไซต์ และระบบบัญชี เพื่อรองรับตลาดแรงงานยุคดิจิทัล',
-    career: ['นักพัฒนาเว็บไซต์', 'เจ้าหน้าที่ IT', 'นักออกแบบกราฟิก', 'เจ้าหน้าที่บัญชี'],
+    desc: 'หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.) สาขาวิชาคอมพิวเตอร์ธุรกิจ เรียนรู้พื้นฐานด้านคอมพิวเตอร์ โปรแกรมสำนักงาน การพัฒนาเว็บไซต์ การออกแบบกราฟิก และเทคโนโลยีสารสนเทศเพื่อการจัดการธุรกิจ',
+    career: ['เจ้าหน้าที่บริการ IT', 'พนักงานพัฒนาเว็บเบื้องต้น', 'นักออกแบบกราฟิกเบื้องต้น', 'เจ้าหน้าที่ธุรการ/บัญชีดิจิทัล'],
     yearPlans: [
-      { year: 'ปีที่ 1', subjects: ['พื้นฐานคอมพิวเตอร์', 'โปรแกรมสำนักงาน', 'คณิตศาสตร์ IT', 'ภาษาอังกฤษ'] },
-      { year: 'ปีที่ 2', subjects: ['การพัฒนาเว็บไซต์', 'ฐานข้อมูล', 'กราฟิกดีไซน์', 'การตลาดดิจิทัล'] },
-      { year: 'ปีที่ 3', subjects: ['โปรแกรมประยุกต์', 'ฝึกงาน', 'โครงงาน', 'วิชาชีพเฉพาะ'] },
+      { year: 'ปีที่ 1', subjects: ['พื้นฐานคอมพิวเตอร์และสารสนเทศ', 'โปรแกรมสำนักงาน', 'คณิตศาสตร์ IT', 'ภาษาอังกฤษเพื่อการสื่อสาร'] },
+      { year: 'ปีที่ 2', subjects: ['การพัฒนาเว็บไซต์เบื้องต้น', 'ระบบฐานข้อมูล', 'คอมพิวเตอร์กราฟิก', 'การวิเคราะห์และออกแบบระบบ'] },
+      { year: 'ปีที่ 3', subjects: ['การประยุกต์ใช้คอมพิวเตอร์ในงานธุรกิจ', 'ฝึกงานในสถานประกอบการ', 'โครงงานคอมพิวเตอร์ธุรกิจ', 'วิชาชีพเฉพาะสาขา'] },
     ],
   },
   {
-    id: 'it', badge: 'ปวส.', icon: '🖥️',
-    title: 'เทคโนโลยีสารสนเทศ', subtitle: 'Information Technology', duration: '2 ปี',
-    color: '#0891b2', bg: '#cffafe',
-    desc: 'ศึกษาด้านการพัฒนาระบบสารสนเทศ การจัดการฐานข้อมูล เครือข่ายคอมพิวเตอร์ และการวิเคราะห์ข้อมูล',
-    career: ['นักพัฒนาซอฟต์แวร์', 'Database Admin', 'Network Admin', 'Data Analyst'],
-    yearPlans: [
-      { year: 'ปีที่ 1', subjects: ['พัฒนาระบบสารสนเทศ', 'เครือข่ายคอมพิวเตอร์', 'ฐานข้อมูลขั้นสูง', 'การวิเคราะห์ข้อมูล'] },
-      { year: 'ปีที่ 2', subjects: ['AI & Machine Learning', 'Cloud Computing', 'โครงงานวิจัย', 'ฝึกสหกิจศึกษา'] },
-    ],
-  },
-  {
-    id: 'dm', badge: 'ปวส.', icon: '📊',
-    title: 'การตลาดดิจิทัล', subtitle: 'Digital Marketing', duration: '2 ปี',
+    id: 'bcom-hvoc', badge: 'ปวส.', icon: '📊',
+    title: 'คอมพิวเตอร์ธุรกิจ (ปวส.)', subtitle: 'Business Computer (High Vocational Certificate)', duration: '2 ปี',
     color: '#059669', bg: '#d1fae5',
-    desc: 'ผสมผสานความรู้ด้านการตลาดและเทคโนโลยี Social Media, E-Commerce และการวิเคราะห์ข้อมูลธุรกิจ',
-    career: ['Digital Marketer', 'Content Creator', 'SEO Specialist', 'E-Commerce Manager'],
+    desc: 'หลักสูตรประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) สาขาวิชาคอมพิวเตอร์ธุรกิจ มุ่งเน้นการพัฒนาระบบสารสนเทศ การวิเคราะห์ข้อมูล การจัดการฐานข้อมูลขั้นสูง และนวัตกรรมเทคโนโลยีสารสนเทศในองค์กร',
+    career: ['นักพัฒนาระบบสารสนเทศ (System Developer)', 'นักวิเคราะห์ข้อมูลธุรกิจ (Data Analyst)', 'ผู้ดูแลระบบฐานข้อมูล (Database Admin)', 'นักพัฒนาเว็บไซต์และแอปพลิเคชัน'],
     yearPlans: [
-      { year: 'ปีที่ 1', subjects: ['หลักการตลาดดิจิทัล', 'Social Media Marketing', 'Content Creation', 'E-Commerce'] },
-      { year: 'ปีที่ 2', subjects: ['SEO & SEM', 'Data-Driven Marketing', 'โครงงานธุรกิจ', 'ฝึกสหกิจศึกษา'] },
+      { year: 'ปีที่ 1', subjects: ['การพัฒนาระบบสารสนเทศทางธุรกิจ', 'การจัดการฐานข้อมูลขั้นสูง', 'เครือข่ายคอมพิวเตอร์และการสื่อสาร', 'การวิเคราะห์และประมวลผลข้อมูล'] },
+      { year: 'ปีที่ 2', subjects: ['เทคโนโลยีธุรกิจดิจิทัลและนวัตกรรม', 'ระบบความปลอดภัยสารสนเทศ', 'โครงงานวิจัยคอมพิวเตอร์ธุรกิจ', 'ฝึกชำนาญการ/ฝึกสหกิจศึกษา'] },
     ],
   },
 ]
@@ -61,36 +50,40 @@ const curriculumData = [
 // ข้อมูลจริงจากป้ายทำเนียบบุคลากร
 const staffData = [
   {
-    name: 'นางสาววีระกา ศรีสุพัฒน์',
-    title: 'หัวหน้าแผนกวิชา', role: 'ครู',
+    name: 'นางสาวจีระภา ศรีสุพัฒน์',
+    title: 'หัวหน้าแผนกวิชา', role: 'ครู (หัวหน้าแผนกวิชา)',
     subject: 'หัวหน้าแผนกวิชาคอมพิวเตอร์ธุรกิจ',
-    initials: 'วก', email: 'weeraka@kptc.ac.th', phone: '055-711-291 ต่อ 101',
+    initials: 'จภ', email: 'weeraka@kptc.ac.th', phone: '055-711-291 ต่อ 101',
     expertise: ['การบริหารแผนก', 'คอมพิวเตอร์ธุรกิจ', 'IT Management'],
     color: '#4f46e5', bg: '#ede9fe', experience: '20+ ปี', isHead: true,
+    image: '/2.png',
   },
   {
     name: 'นายนพดล สังข์น้อย',
-    title: 'รองหัวหน้าแผนก', role: 'ครูชำนาญการ',
+    title: 'รองหัวหน้าแผนก', role: 'ครูชำนาญการ (รองหัวหน้าแผนกฯ)',
     subject: 'การพัฒนาระบบสารสนเทศ',
     initials: 'นพ', email: 'noppadon@kptc.ac.th', phone: '055-711-291 ต่อ 102',
     expertise: ['System Analysis', 'Database Design', 'Network'],
     color: '#0891b2', bg: '#cffafe', experience: '15+ ปี', isHead: false,
+    image: '/3.png',
   },
   {
-    name: 'นางสมพร โภคะรัตน์',
+    name: 'นางสมพร โมกขะรัตน์',
     title: 'ครูชำนาญการพิเศษ', role: 'ครูชำนาญการพิเศษ',
     subject: 'โปรแกรมสำนักงานและบัญชี',
     initials: 'สพ', email: 'somporn@kptc.ac.th', phone: '055-711-291 ต่อ 103',
     expertise: ['Microsoft Office', 'บัญชีคอมพิวเตอร์', 'โปรแกรมสำนักงาน'],
     color: '#7c3aed', bg: '#f3e8ff', experience: '18+ ปี', isHead: false,
+    image: '/4.png',
   },
   {
-    name: 'นายทวิภพ พินิจลิขิต',
+    name: 'นายทวีภพ พินิจลิขิต',
     title: 'ครูชำนาญการ', role: 'ครูชำนาญการ',
     subject: 'การพัฒนาเว็บไซต์และโปรแกรม',
     initials: 'ทว', email: 'tawiphop@kptc.ac.th', phone: '055-711-291 ต่อ 104',
     expertise: ['Web Development', 'PHP', 'JavaScript'],
     color: '#059669', bg: '#d1fae5', experience: '12+ ปี', isHead: false,
+    image: '/5.png',
   },
   {
     name: 'นายฐิติพงษ์ แก้วดี',
@@ -99,6 +92,7 @@ const staffData = [
     initials: 'ฐต', email: 'thitipong@kptc.ac.th', phone: '055-711-291 ต่อ 105',
     expertise: ['Network', 'Cisco', 'Linux Server'],
     color: '#d97706', bg: '#fef3c7', experience: '8+ ปี', isHead: false,
+    image: '/6.png',
   },
   {
     name: 'นายกันตพงศ์ แก้วนิล',
@@ -107,14 +101,16 @@ const staffData = [
     initials: 'กต', email: 'kantapong@kptc.ac.th', phone: '055-711-291 ต่อ 106',
     expertise: ['Photoshop', 'Illustrator', 'Multimedia'],
     color: '#dc2626', bg: '#fee2e2', experience: '4+ ปี', isHead: false,
+    image: '/7.png',
   },
   {
-    name: 'นางสาวอัจฉริยาน์ เดชสรคันธ์',
+    name: 'นางสาวณัฐธยาน์ เถกิงสรคันธ์',
     title: 'ครูพิเศษ', role: 'ครูพิเศษ',
     subject: 'การตลาดดิจิทัล',
-    initials: 'อจ', email: 'atchariyan@kptc.ac.th', phone: '055-711-291 ต่อ 107',
+    initials: 'ณฐ', email: 'atchariyan@kptc.ac.th', phone: '055-711-291 ต่อ 107',
     expertise: ['Digital Marketing', 'Social Media', 'E-Commerce'],
     color: '#db2777', bg: '#fce7f3', experience: '3+ ปี', isHead: false,
+    image: '/8.png',
   },
 ]
 
@@ -305,163 +301,311 @@ function Navbar({ activePage, onNav }) {
 }
 
 /* =========================================================
-   PAGE: HOME
+   AUTO CAROUSEL COMPONENT (สำหรับเลื่อนผลงานและข่าวอัตโนมัติ)
 ========================================================= */
-function HomePage({ onNav }) {
-  const [typed, setTyped] = useState('')
-  const words = ['คอมพิวเตอร์ธุรกิจ', 'เทคโนโลยีสารสนเทศ', 'การตลาดดิจิทัล']
-  const [wi, setWi] = useState(0)
-  const [ci, setCi] = useState(0)
-  const [del, setDel] = useState(false)
+function AutoCarousel({ items, renderItem, columns }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [itemsPerView, setItemsPerView] = useState(columns || 3)
 
   useEffect(() => {
-    const w = words[wi]
-    const t = setTimeout(() => {
-      if (!del) {
-        if (ci < w.length) { setTyped(w.slice(0, ci + 1)); setCi(c => c + 1) }
-        else setTimeout(() => setDel(true), 2000)
-      } else {
-        if (ci > 0) { setTyped(w.slice(0, ci - 1)); setCi(c => c - 1) }
-        else { setDel(false); setWi(i => (i + 1) % words.length) }
-      }
-    }, del ? 55 : 90)
-    return () => clearTimeout(t)
-  }, [ci, del, wi])
+    if (columns) {
+      setItemsPerView(columns)
+      return
+    }
+    const updateView = () => {
+      if (window.innerWidth < 768) setItemsPerView(1)
+      else if (window.innerWidth < 1024) setItemsPerView(2)
+      else setItemsPerView(3)
+    }
+    updateView()
+    window.addEventListener('resize', updateView)
+    return () => window.removeEventListener('resize', updateView)
+  }, [columns])
+
+  useEffect(() => {
+    if (!items || items.length <= itemsPerView) return
+    const timer = setInterval(() => {
+      setCurrentIndex(prev => (prev >= items.length - itemsPerView ? 0 : prev + 1))
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [items, itemsPerView])
+
+  if (!items || items.length === 0) return null
+
+  if (items.length <= itemsPerView) {
+    return (
+      <div className="flex flex-wrap justify-center -mx-3">
+        {items.map((item, idx) => (
+          <div key={idx} className="px-3 w-full md:w-1/2 lg:w-1/3 mb-6" style={columns === 1 ? { width: '100%' } : {}}>
+            {renderItem(item)}
+          </div>
+        ))}
+      </div>
+    )
+  }
 
   return (
-    <div className="page-enter">
-      {/* Hero Banner */}
-      <div className="hero-bg py-20 sm:py-28 text-white text-center relative overflow-hidden">
-        {/* Decorative dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-          {[...Array(12)].map((_, i) => (
-            <div key={i}
-              className="absolute rounded-full bg-white"
-              style={{
-                width: 4 + (i % 5) * 3,
-                height: 4 + (i % 5) * 3,
-                left: `${8 + i * 8}%`,
-                top: `${15 + (i % 4) * 18}%`,
-                opacity: 0.08 + (i % 3) * 0.04,
-                animation: `floatDot ${4 + i * 0.5}s ease-in-out ${i * 0.3}s infinite`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <div className="hero-badge mb-8">
-            <span className="sci-pulse-dot" />
-            🎓 วิทยาลัยเทคนิคกำแพงเพชร
+    <div className="overflow-hidden relative py-2 -mx-3 px-3">
+      <div
+        className="flex transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
+      >
+        {items.map((item, idx) => (
+          <div key={idx} className="flex-none px-3 py-2" style={{ width: `${100 / itemsPerView}%` }}>
+            {renderItem(item)}
           </div>
+        ))}
+      </div>
+      
+      <div className="flex justify-center gap-2 mt-6">
+        {Array.from({ length: items.length - itemsPerView + 1 }).map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`h-2.5 rounded-full transition-all duration-300 ${
+              currentIndex === idx ? 'bg-cyan-400 w-8' : 'bg-slate-600 w-2.5 hover:bg-slate-500'
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-3 sci-display">
+/* =========================================================
+   PAGE: HOME (หน้าหลัก)
+========================================================= */
+function HomePage({ onNav }) {
+  const [latestNews, setLatestNews] = useState([])
+  const [latestPortfolios, setLatestPortfolios] = useState([])
+  const [heroStaff, setHeroStaff] = useState(staffData)
+
+  useEffect(() => {
+    // ดึงข่าวสาร
+    fetch('/api/news').then(r => r.json()).then(data => {
+      if (Array.isArray(data)) {
+        setLatestNews(data.slice(0, 9).map(n => ({
+          id: n.id,
+          tag: n.category || 'ข่าวสาร',
+          date: n.published_at ? new Date(n.published_at).toLocaleDateString('th-TH', { day:'numeric', month:'short', year:'numeric' }) : '',
+          title: n.title,
+          image: n.cover_image_url
+        })))
+      }
+    }).catch(() => {})
+
+    // ดึงผลงาน
+    fetch('/api/portfolios').then(r => r.json()).then(data => {
+      if (Array.isArray(data)) {
+        setLatestPortfolios(data.slice(0, 9).map(p => ({
+          id: p.id,
+          title: p.title,
+          desc: p.description,
+          icon: p.icon || '🎨',
+          image: p.cover_image_url
+        })))
+      }
+    }).catch(() => {})
+
+    // ดึงข้อมูลอาจารย์
+    fetch('/api/staff').then(r => r.json()).then(data => {
+      if (Array.isArray(data) && data.length > 0) {
+        setHeroStaff(data.map((s, idx) => ({ ...staffData[idx], ...s, bg: s.bg_color || s.bg, image: staffData[idx]?.image })))
+      }
+    }).catch(() => {})
+  }, [])
+
+  return (
+    <div className="page-enter bg-[#0a0f1e] min-h-screen text-slate-200">
+      
+      {/* 1. Hero Section (อวกาศ & 3D ลอย) */}
+      <section className="relative pt-32 pb-10 px-4 overflow-hidden flex flex-col items-center min-h-[90vh] justify-center bg-[#060a16]">
+        
+        {/* พื้นหลัง: เส้น Grid และดวงดาว */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"
+          style={{ WebkitMaskImage: 'linear-gradient(to bottom, white, transparent)', maskImage: 'linear-gradient(to bottom, white, transparent)' }}
+        ></div>
+        <div className="absolute top-1/4 left-[15%] w-1.5 h-1.5 bg-white rounded-full opacity-70 blur-[1px]"></div>
+        <div className="absolute top-1/3 right-[20%] w-2 h-2 bg-slate-300 rounded-full opacity-80"></div>
+        <div className="absolute bottom-1/4 left-[25%] w-1 h-1 bg-white rounded-full opacity-50"></div>
+        <div className="absolute top-20 right-[10%] w-1.5 h-1.5 bg-white rounded-full opacity-40"></div>
+        
+        {/* แสง Ambient สีฟ้า */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-cyan-600/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div className="relative z-10 text-center w-full max-w-5xl mx-auto flex flex-col items-center">
+          
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-2 tracking-tight">
             แผนกวิชา
           </h1>
-          <div className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 flex items-center justify-center gap-2 min-h-[1.3em] sci-display">
-            <span className="hero-typed">{typed}</span>
-            <span className="hero-typed cursor">|</span>
-          </div>
-          <p className="text-white/70 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-6">
-            มุ่งมั่นผลิตบุคลากรด้านเทคโนโลยีสารสนเทศที่มีคุณภาพ<br className="hidden sm:block" />
+          {/* แก้ไขข้อความให้แสดงครบเต็มๆ แล้วครับ */}
+          <h1 className="text-4xl md:text-6xl font-black text-cyan-400 mb-6 flex items-center justify-center">
+            คอมพิวเตอร์ธุรกิจ (ปวช.)
+          </h1>
+          
+          <p className="text-sm md:text-base text-slate-300 max-w-lg mx-auto leading-relaxed mb-8 font-medium">
+            มุ่งมั่นผลิตบุคลากรด้านเทคโนโลยีสารสนเทศที่มีคุณภาพ<br className="hidden md:block" />
             พร้อมรับมือกับโลกธุรกิจดิจิทัลในยุคศตวรรษที่ 21
           </p>
 
-          <div className="hero-3d-stage" aria-hidden="true">
-            <div className="hero-orbit">
-              <div className="hero-ball" />
-              <div className="hero-cube">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div>
-            </div>
-          </div>
+          {/* Teacher Carousel in Hero Section */}
+          <div className="w-full max-w-sm mx-auto mt-4 mb-4 px-4">
+            <AutoCarousel 
+              items={heroStaff}
+              columns={1}
+              renderItem={(staff) => (
+                <div className="sci-card-static overflow-hidden w-full max-w-sm mx-auto shadow-[0_0_30px_rgba(6,182,212,0.15)] hover:shadow-[0_0_40px_rgba(6,182,212,0.3)] transition-all duration-300"
+                  style={{ borderColor: (staff.color || '#0891b2') + '60' }}>
+                  <div className="h-1.5 w-full" style={{ background: staff.color || '#0891b2', boxShadow: `0 0 12px ${staff.color || '#0891b2'}` }} />
+                  
+                  <div className="w-full relative bg-slate-800/50 flex justify-center pt-6">
+                    {staff.photo_url || staff.image ? (
+                      <img src={staff.photo_url || staff.image} alt={staff.name} className="w-full h-auto max-h-[350px] object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
+                    ) : (
+                      <div className="w-full aspect-[3/4] max-h-[350px] flex items-center justify-center text-6xl font-black text-white"
+                        style={{ background: staff.color || '#0891b2' }}>
+                        {staff.initials}
+                      </div>
+                    )}
+                    {(staff.is_head || staff.isHead) && (
+                      <div className="absolute top-4 right-4 text-xs px-3 py-1 rounded-full font-bold shadow-lg"
+                        style={{ background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color: '#0a0f1e', boxShadow: '0 0 12px rgba(251,191,36,0.6)' }}>
+                        👑 หัวหน้าแผนก
+                      </div>
+                    )}
+                  </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
-            <button onClick={() => onNav('curriculum')} className="w-full sm:w-auto sci-btn-hero-primary">
-              📚 ดูหลักสูตร
-            </button>
-            <button onClick={() => onNav('contact')} className="w-full sm:w-auto sci-btn-hero-ghost">
-              📬 ติดต่อเรา
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="sci-section">
-        <div className="container-center py-10">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {stats.map((s, i) => (
-              <div key={i} className="text-center group sci-stat">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-3 text-2xl sci-stat-icon"
-                  style={{ background: s.bg + '33', border: `1px solid ${s.color}44` }}>
-                  {s.icon}
+                  <div className="p-6 text-center bg-slate-900/90 backdrop-blur-md">
+                    <h2 className="text-xl font-extrabold text-white mb-2">{staff.name}</h2>
+                    <div className="mb-4">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold"
+                        style={{ color: staff.color || '#0891b2', background: (staff.bg || '#cffafe') + '44', border: `1px solid ${staff.color || '#0891b2'}40` }}>
+                        {staff.role}
+                      </span>
+                    </div>
+                    {staff.expertise && staff.expertise.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 justify-center">
+                        {staff.expertise.map((e, i) => (
+                          <span key={i} className="text-[10px] px-2 py-0.5 bg-white/5 border border-white/10 rounded text-slate-300">
+                            {e}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="text-3xl font-black mb-1 sci-display" style={{ color: s.color }}>{s.value}</div>
-                <div className="sci-text-muted text-sm">{s.label}</div>
-              </div>
-            ))}
+              )}
+            />
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Quick Links */}
-      <div className="sci-section-alt">
-      <div className="container-center py-14">
-        <h2 className="sci-section-title">🔗 ลิงก์ที่ใช้บ่อย</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {/* 2. Quick Links */}
+      <section className="py-12 px-4 relative z-10">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: '📅', label: 'ตารางเรียน', color: '#4f46e5', bg: '#ede9fe' },
-            { icon: '📝', label: 'สมัครเรียน', color: '#059669', bg: '#d1fae5' },
-            { icon: '🎓', label: 'ทุนการศึกษา', color: '#d97706', bg: '#fef3c7' },
-            { icon: '🗺️', label: 'แผนที่วิทยาลัย', color: '#0891b2', bg: '#cffafe' },
-          ].map((l, i) => (
-            <button
-              key={i}
-              className="sci-card flex flex-col items-center gap-3 p-6 group"
+            { id: 'schedule', icon: '📅', label: 'ตารางเรียน' },
+            { id: 'contact', icon: '📝', label: 'สมัครเรียน' },
+            { id: 'scholarship', icon: '🎓', label: 'ทุนการศึกษา' },
+            { id: 'map', icon: '🗺️', label: 'แผนที่วิทยาลัย' },
+          ].map((link, i) => (
+            <button 
+              key={i} 
+              onClick={() => onNav(link.id === 'contact' ? 'contact' : 'home')}
+              className="flex flex-col items-center justify-center gap-3 p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-cyan-500/30 backdrop-blur-md transition-all hover:-translate-y-1 group"
             >
-              <span className="text-3xl w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200"
-                style={{ background: l.bg + '33', border: `1px solid ${l.color}44` }}>
-                {l.icon}
-              </span>
-              <span className="text-sm font-semibold sci-text">{l.label}</span>
+              <span className="text-4xl group-hover:scale-110 transition-transform">{link.icon}</span>
+              <span className="font-semibold text-cyan-50">{link.label}</span>
             </button>
           ))}
         </div>
-      </div>
-      </div>
+      </section>
 
-      {/* Featured sections preview */}
-      <div className="sci-section">
-        <div className="container-center py-14">
-          <h2 className="sci-section-title">📋 เนื้อหาทั้งหมด</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {navItems.filter(n => n.id !== 'home').map((item) => (
-              <button
-                key={item.id}
-                onClick={() => onNav(item.id)}
-                className="sci-card flex items-center gap-4 p-5 text-left group"
-              >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
-                  style={{ background: 'rgba(6,182,212,0.12)', border: '1px solid rgba(34,211,238,0.25)' }}>
-                  {item.icon}
-                </div>
-                <div>
-                  <div className="font-semibold sci-text group-hover:text-cyan-400 transition-colors">
-                    {item.label}
+      {/* 3. Portfolio (Slider) */}
+      <section className="py-16 px-4 relative z-10 bg-slate-900/30 border-y border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3">
+            <span className="text-4xl">🎨</span> ผลงานนักศึกษาที่โดดเด่น
+          </h2>
+          
+          {latestPortfolios.length === 0 ? (
+            <div className="text-center text-slate-500 py-10">กำลังโหลดผลงาน... หรือยังไม่มีผลงาน</div>
+          ) : (
+            <AutoCarousel 
+              items={latestPortfolios} 
+              renderItem={(p) => (
+                <div className="rounded-2xl overflow-hidden bg-slate-800/40 border border-white/10 backdrop-blur-md flex flex-col group hover:border-cyan-500/40 transition-colors h-full">
+                  <div className="w-full aspect-video bg-slate-900/80 flex items-center justify-center text-5xl relative overflow-hidden">
+                    {p.image ? (
+                      <img src={p.image} alt={p.title} className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                    ) : (
+                      <span className="group-hover:scale-125 transition-transform duration-500">{p.icon}</span>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-60"></div>
                   </div>
-                  <div className="sci-text-dim text-xs mt-0.5">คลิกเพื่อดู →</div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="text-lg font-bold text-cyan-100 mb-2">{p.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-5 line-clamp-2">{p.desc}</p>
+                    <button onClick={() => onNav('portfolio')} className="w-full mt-auto py-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 font-semibold border border-cyan-500/20 hover:bg-cyan-500/20 hover:border-cyan-500/40 transition-all">
+                      ดูรายละเอียด
+                    </button>
+                  </div>
                 </div>
-              </button>
-            ))}
+              )}
+            />
+          )}
+        </div>
+      </section>
+
+      {/* 4. Latest News (Slider) */}
+      <section className="py-16 px-4 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3">
+            <span className="text-4xl">📰</span> ข่าวสารและกิจกรรมล่าสุด
+          </h2>
+          
+          {latestNews.length === 0 ? (
+            <div className="text-center text-slate-500 py-10">กำลังโหลดข่าวสาร... หรือยังไม่มีข่าวสาร</div>
+          ) : (
+            <div className="mb-12">
+              <AutoCarousel 
+                items={latestNews}
+                renderItem={(news) => (
+                  <div className="rounded-2xl overflow-hidden bg-white/5 border border-white/5 backdrop-blur-md flex flex-col hover:-translate-y-1 hover:border-white/20 transition-all h-full cursor-pointer" onClick={() => onNav('news')}>
+                    <div className="w-full h-44 bg-slate-800/80 flex items-center justify-center text-slate-500 text-sm font-medium border-b border-white/5 relative overflow-hidden">
+                      {news.image ? (
+                        <img src={news.image} alt={news.title} className="w-full h-full object-cover" />
+                      ) : (
+                        <span className="opacity-50">[ ไม่มีรูปภาพข่าว ]</span>
+                      )}
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/20">
+                          {news.tag}
+                        </span>
+                        <span className="text-xs text-slate-400">{news.date}</span>
+                      </div>
+                      <h3 className="font-bold text-slate-200 leading-snug line-clamp-3">
+                        {news.title}
+                      </h3>
+                    </div>
+                  </div>
+                )}
+              />
+            </div>
+          )}
+          
+          <div className="text-center">
+            <button onClick={() => onNav('news')} className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium backdrop-blur-md transition-all">
+              ดูข่าวสารทั้งหมด <span>→</span>
+            </button>
           </div>
         </div>
-      </div>
+      </section>
+
     </div>
   )
 }
@@ -564,8 +708,8 @@ function StaffPage() {
   const [staffList, setStaffList] = useState(staffData)
   useEffect(() => {
     fetch('/api/staff').then(r => r.json()).then(data => {
-      if (Array.isArray(data) && data.length > 0) {
-        setStaffList(data.map(s => ({ ...s, bg: s.bg_color || s.bg })))
+      if (Array.isArray(data)) {
+        setStaffList(data.map((s, idx) => ({ ...s, bg: s.bg_color || s.bg, image: staffData[idx]?.image })))
       }
     }).catch(() => {})
   }, [])
@@ -580,76 +724,98 @@ function StaffPage() {
 
       {/* Head teacher */}
       {head && (
-        <div className="mb-8">
-          <div className="sci-card-static overflow-hidden"
+        <div className="mb-10 flex justify-center">
+          <div className="sci-card-static overflow-hidden w-full max-w-md"
             style={{ borderColor: head.color + '60' }}>
             <div className="h-1.5 w-full" style={{ background: head.color, boxShadow: `0 0 12px ${head.color}` }} />
-            <div className="p-7">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                <div className="relative flex-shrink-0">
-                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-black text-white"
-                    style={{ background: head.color, boxShadow: `0 0 24px ${head.color}66` }}>
-                    {head.initials}
-                  </div>
-                  <div className="absolute -top-2 -right-2 text-xs px-2 py-0.5 rounded-full font-bold"
-                    style={{ background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color: '#0a0f1e', boxShadow: '0 0 12px rgba(251,191,36,0.5)' }}>
-                    👑 หัวหน้า
-                  </div>
+            
+            <div className="w-full relative bg-slate-800/50 flex justify-center">
+              {head.photo_url || head.image ? (
+                <img src={head.photo_url || head.image} alt={head.name} className="w-full h-auto max-h-[500px] object-contain" />
+              ) : (
+                <div className="w-full aspect-[3/4] flex items-center justify-center text-6xl font-black text-white"
+                  style={{ background: head.color }}>
+                  {head.initials}
                 </div>
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-2 mb-1">
-                    <h2 className="text-xl font-extrabold sci-text">{head.name}</h2>
-                    <Badge label={head.role} color={head.color} bg={head.bg + '44'} />
-                  </div>
-                  <p className="sci-text-muted text-sm mb-3">{head.subject} · ประสบการณ์ {head.experience}</p>
-                  <div className="grid sm:grid-cols-2 gap-2 text-sm sci-text-muted mb-3">
-                    <span className="flex items-center gap-2"><span>📧</span>{head.email}</span>
-                    <span className="flex items-center gap-2"><span>📞</span>{head.phone}</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
+              )}
+              <div className="absolute top-4 right-4 text-sm px-3 py-1 rounded-full font-bold shadow-lg"
+                style={{ background: 'linear-gradient(135deg,#fbbf24,#f59e0b)', color: '#0a0f1e', boxShadow: '0 0 12px rgba(251,191,36,0.6)' }}>
+                👑 หัวหน้าแผนก
+              </div>
+            </div>
+
+            <div className="p-6 text-center">
+              <h2 className="text-2xl font-extrabold sci-text mb-3">{head.name}</h2>
+              <div className="mb-4">
+                <Badge label={head.role} color={head.color} bg={head.bg + '44'} />
+              </div>
+              {(head.subject || head.experience) && (
+                <p className="sci-text-muted text-sm mb-5">
+                  {head.subject} {head.subject && head.experience && '·'} {head.experience && `ประสบการณ์ ${head.experience}`}
+                </p>
+              )}
+              
+              {(head.email || head.phone) && (
+                <div className="flex flex-col gap-2 text-sm sci-text-muted mb-6 items-center">
+                  {head.email && <span className="flex items-center gap-2"><span>📧</span>{head.email}</span>}
+                  {head.phone && <span className="flex items-center gap-2"><span>📞</span>{head.phone}</span>}
+                </div>
+              )}
+              
+              {head.expertise && head.expertise.length > 0 && (
+                <div className="pt-5 border-t border-cyan-500/15">
+                  <div className="text-xs sci-text-dim mb-3 font-medium uppercase tracking-wider text-left">ความเชี่ยวชาญ</div>
+                  <div className="flex flex-wrap gap-2">
                     {head.expertise.map((e, i) => (
                       <span key={i} className="sci-chip-sm">{e}</span>
                     ))}
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
       )}
 
-      {/* Staff grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {rest.map((staff, i) => (
-          <div key={i} className="sci-card overflow-hidden">
+          <div key={i} className="sci-card overflow-hidden flex flex-col">
             <div className="h-1" style={{ background: staff.color, boxShadow: `0 0 8px ${staff.color}88` }} />
-            <div className="p-5">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center text-lg font-black text-white flex-shrink-0"
-                  style={{ background: staff.color, boxShadow: `0 0 16px ${staff.color}55` }}>
+            
+            <div className="w-full relative bg-slate-800/50 border-b border-slate-700/50 flex justify-center">
+              {staff.photo_url || staff.image ? (
+                <img src={staff.photo_url || staff.image} alt={staff.name} className="w-full h-auto max-h-[400px] object-contain" />
+              ) : (
+                <div className="w-full aspect-[3/4] flex items-center justify-center text-5xl font-black text-white"
+                  style={{ background: staff.color }}>
                   {staff.initials}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-bold sci-text text-sm leading-snug mb-1">{staff.name}</h3>
-                  <Badge label={staff.role} color={staff.color} bg={staff.bg + '44'} />
-                </div>
+              )}
+            </div>
+
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="mb-5 text-center">
+                <h3 className="font-bold sci-text text-lg leading-snug mb-2">{staff.name}</h3>
+                <Badge label={staff.role} color={staff.color} bg={staff.bg + '44'} />
               </div>
 
-              <div className="space-y-1.5 text-xs sci-text-muted mb-4">
-                <div className="flex items-start gap-2"><span>📚</span><span>{staff.subject}</span></div>
-                <div className="flex items-center gap-2"><span>⏱</span><span>ประสบการณ์ {staff.experience}</span></div>
-                <div className="flex items-start gap-2"><span>📧</span><span className="truncate">{staff.email}</span></div>
-                <div className="flex items-center gap-2"><span>📞</span><span>{staff.phone}</span></div>
+              <div className="space-y-2 text-xs sci-text-muted mb-5">
+                {staff.subject && <div className="flex items-start gap-2"><span>📚</span><span>{staff.subject}</span></div>}
+                {staff.experience && <div className="flex items-center gap-2"><span>⏱</span><span>ประสบการณ์ {staff.experience}</span></div>}
+                {staff.email && <div className="flex items-start gap-2"><span>📧</span><span className="truncate">{staff.email}</span></div>}
+                {staff.phone && <div className="flex items-center gap-2"><span>📞</span><span>{staff.phone}</span></div>}
               </div>
 
-              <div className="pt-3 border-t border-cyan-500/15">
-                <div className="text-xs sci-text-dim mb-2 font-medium uppercase tracking-wider">ความเชี่ยวชาญ</div>
-                <div className="flex flex-wrap gap-1.5">
-                  {staff.expertise.map((e, ei) => (
-                    <span key={ei} className="sci-chip-sm">{e}</span>
-                  ))}
+              {staff.expertise && staff.expertise.length > 0 && (
+                <div className="pt-4 border-t border-cyan-500/15 mt-auto">
+                  <div className="text-xs sci-text-dim mb-3 font-medium uppercase tracking-wider">ความเชี่ยวชาญ</div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {staff.expertise.map((e, ei) => (
+                      <span key={ei} className="sci-chip-sm">{e}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         ))}
@@ -668,7 +834,7 @@ function NewsPage() {
   const cats = ['ทั้งหมด', 'ความสำเร็จ', 'ประกาศ', 'กิจกรรม', 'อบรม']
   useEffect(() => {
     fetch('/api/news').then(r => r.json()).then(data => {
-      if (Array.isArray(data) && data.length > 0) {
+      if (Array.isArray(data)) {
         setNewsList(data.map(n => ({
           ...n,
           catColor: n.category_color,
@@ -702,6 +868,11 @@ function NewsPage() {
         {filtered.map(item => (
           <article key={item.id} className="sci-card overflow-hidden flex flex-col">
             <div className="h-1" style={{ background: item.catColor, boxShadow: `0 0 8px ${item.catColor}88` }} />
+            {item.cover_image_url && (
+              <div className="w-full relative bg-slate-800/50 border-b border-slate-700/50 flex justify-center">
+                <img src={item.cover_image_url} alt={item.title} className="w-full h-48 object-contain bg-slate-900/50" />
+              </div>
+            )}
             <div className="p-5 flex flex-col flex-1">
               {item.hot && (
                 <div className="inline-flex items-center gap-1 text-xs font-bold text-rose-400 px-2.5 py-1 rounded-full mb-3 self-start"
@@ -721,9 +892,6 @@ function NewsPage() {
                 {item.title}
               </h3>
               <p className="sci-text-muted text-sm leading-relaxed flex-1 mb-4 line-clamp-3">{item.desc}</p>
-              <button className="sci-link flex items-center gap-1 mt-auto">
-                อ่านเพิ่มเติม <span>→</span>
-              </button>
             </div>
           </article>
         ))}
@@ -741,7 +909,7 @@ function PortfolioPage() {
   const [portList, setPortList] = useState(portfolioData)
   useEffect(() => {
     fetch('/api/portfolios').then(r => r.json()).then(data => {
-      if (Array.isArray(data) && data.length > 0) {
+      if (Array.isArray(data)) {
         setPortList(data.map(p => ({ ...p, bg: p.bg_color || p.bg, desc: p.description })))
       }
     }).catch(() => {})
@@ -756,10 +924,15 @@ function PortfolioPage() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {portList.map(p => (
           <div key={p.id}
-            className="sci-card overflow-hidden cursor-pointer group"
+            className="sci-card overflow-hidden cursor-pointer group flex flex-col"
             onClick={() => setSelected(p)}>
             <div className="h-1.5" style={{ background: p.color, boxShadow: `0 0 8px ${p.color}88` }} />
-            <div className="p-5">
+            {p.cover_image_url && (
+              <div className="w-full relative bg-slate-800/50 border-b border-slate-700/50 flex justify-center">
+                <img src={p.cover_image_url} alt={p.title} className="w-full h-48 object-contain bg-slate-900/50" />
+              </div>
+            )}
+            <div className="p-5 flex-1">
               <div className="flex items-start justify-between mb-3">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
                   style={{ background: (p.bg||'#ede9fe') + '33', border: `1px solid ${p.color}44` }}>
@@ -791,8 +964,13 @@ function PortfolioPage() {
       {/* Modal */}
       {selected && (
         <div className="sci-modal-overlay" onClick={() => setSelected(null)}>
-          <div className="sci-modal" onClick={e => e.stopPropagation()}>
+          <div className="sci-modal overflow-hidden" onClick={e => e.stopPropagation()}>
             <div className="h-2" style={{ background: selected.color, boxShadow: `0 0 16px ${selected.color}` }} />
+            {selected.cover_image_url && (
+              <div className="w-full relative bg-slate-800/50 border-b border-slate-700/50 flex justify-center">
+                <img src={selected.cover_image_url} alt={selected.title} className="w-full h-auto max-h-[400px] object-contain bg-slate-900/50" />
+              </div>
+            )}
             <div className="p-8">
               <div className="flex items-start justify-between mb-4">
                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl"
@@ -809,7 +987,7 @@ function PortfolioPage() {
               <p className="sci-text-dim text-sm mb-4">👤 {selected.student} · {selected.year}</p>
               <p className="sci-text-muted leading-relaxed mb-6 text-sm">{selected.desc}</p>
               <div className="flex flex-wrap gap-2">
-                {selected.tech.map((t, i) => (
+                {(selected.tech || []).map((t, i) => (
                   <span key={i} className="px-3 py-1.5 rounded-xl text-sm font-medium"
                     style={{ color: selected.color, background: selected.bg + '44', border: `1px solid ${selected.color}40` }}>
                     {t}
